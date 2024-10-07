@@ -1,22 +1,26 @@
 import React from "react";
 import classes from './Header.module.css'
+import Logo from "../../imeges/Logo";
+
 
 const Header = () => {
-// верхний блок
- return (
-    <div className={classes.header} >
-        <div className={classes.logo_name}>
-            <img  src="https://us.123rf.com/450wm/alextanya123rf/alextanya123rf1605/alextanya123rf160500214/56418006-%D0%B7%D0%BD%D0%B0%D1%87%D0%BE%D0%BA-%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%D0%B0-%D0%B2%D0%B5%D0%BA%D1%82%D0%BE%D1%80-%D1%81%D0%B8%D0%BC%D0%B2%D0%BE%D0%BB-%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%D0%B0-%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD-%D0%BF%D0%B8%D0%BA%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BE%D0%B9-%D0%BF%D0%BB%D0%BE%D1%81%D0%BA%D0%B8%D0%B9-%D0%B7%D0%BD%D0%B0%D1%87%D0%BE%D0%BA-%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%D0%B0-%D0%B2%D0%B5%D0%B1-%D0%B7%D0%BD%D0%B0%D1%87%D0%BE%D0%BA.jpg" />
-       PHONE STORE
+
+    return (
+        <div className={classes.header} >
+            <div className={classes.logo_name}>
+                <Logo />
+                PHONE STORE
+            </div>
+            <nav className={classes.navigation}>
+                <ul>
+                    <li><a href="">CATALOGUE</a></li>
+                    <li> <a href="">FASHION</a></li>
+                    <li><a href="">FAVORITE</a></li>
+                    <li> <a href="">LIFESTYLE</a></li>
+                    <li><a href="" className={classes.sign_up}>SIGN UP</a></li>
+                </ul>
+            </nav>
         </div>
-        <div className={classes.links}>
-        <a href="">CATALOGUE</a>
-        <a href="">FASHION</a>
-        <a href="">FAVORITE</a>
-        <a href="">LIFESTYLE</a>
-        <a  href="" className={classes.sign_up}>SIGN UP</a>
-        </div>
-    </div>
- )
+    )
 }
- export default Header;
+export default Header;

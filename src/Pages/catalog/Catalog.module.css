@@ -1,0 +1,64 @@
+.catalog {
+    border: solid, red;
+    border-radius: 59px;
+    background-image: url('/src/imeges/belyy-abstraktnyy-fon-dlya-fotoshopa.jpg');
+    background-size: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: auto;
+    height: 725px;
+}
+
+
+
+
+.live {
+
+    font-style: normal;
+    font-size: 3rem;
+    margin-top: auto;
+    margin-left: 30px;
+}
+
+.shop {
+    display: flex;
+    margin-right: 10px;
+    margin-left: 30px;
+ }
+
+.shopNow {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background: black;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 2rem;
+
+}
+
+.maintex {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-weight: 900;
+    font-size: 8rem;
+    margin-top: 50px;
+    margin-left: 30px;
+    width: fit-content;
+    z-index: 10;
+}
+
+.with {
+
+    background: #FFFFFF;
+}
+
+.orage::before {
+    z-index: -1;
+    position: absolute;
+    content: '';
+    background: #EBD96B;
+    width: 100%;
+    height: 120px;
+    transform: rotate(0.49turn);
+}

@@ -12,12 +12,12 @@ const Header = () => {
                 PHONE STORE
             </div>
             <nav className={classes.navigation}>
-                <ul>
-                    <li><a href="">CATALOGUE</a></li>
-                    <li> <a href="">FASHION</a></li>
-                    <li><a href="">FAVORITE</a></li>
-                    <li> <a href="">LIFESTYLE</a></li>
-                    <li><a href="" className={classes.sign_up}>SIGN UP</a></li>
+                <ul className={classes.list}>
+                    <li><a href="" className={classes.link}>CATALOGUE</a></li>
+                    <li><a href="" className={classes.link}>FASHION</a></li>
+                    <li><a href="" className={classes.link}>FAVORITE</a></li>
+                    <li><a href="" className={classes.link}>LIFESTYLE</a></li>
+                    <li><a href="" className={classes.link} id={classes.sign_up}>SIGN UP</a></li>
                 </ul>
             </nav>
         </div>

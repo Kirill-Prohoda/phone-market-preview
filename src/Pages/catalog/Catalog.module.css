@@ -1,5 +1,5 @@
 .catalog {
-    border: solid, red;
+  
     border-radius: 59px;
     background-image: url('/src/imeges/belyy-abstraktnyy-fon-dlya-fotoshopa.jpg');
     background-size: no-repeat;
@@ -49,15 +49,17 @@
 }
 
 .with {
-
-    background: #FFFFFF;
+    margin-top: 25px;
+    width: 100%;
+    height: 120px;
+    background: #ffffff;
 }
 
 .orage::before {
     z-index: -1;
     position: absolute;
     content: '';
-    background: #EBD96B;
+    background: #00A287;
     width: 100%;
     height: 120px;
     transform: rotate(0.49turn);

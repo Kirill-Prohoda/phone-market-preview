@@ -1,0 +1,49 @@
+
+
+
+.fir{
+    display: flex;
+    margin-top: 30px;
+    
+    width: 100%;
+    background-color: #00A287;
+    gap: 30px;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+
+
+
+.htc{
+    width: 100px;
+    height: 70px;
+}
+
+.huawei{
+    width: 100px;
+    height: 70px;
+}
+
+.iphone {
+    width: 100px;
+    height: 70px;
+}
+
+.motorola{
+    margin-top: 10px;
+    width: 200px;
+    height: 50px;
+}
+
+.nokia{
+    margin-top: 10px;
+    width: 200px;
+    height: 50px;
+}
+
+.vivo{
+    width: 100px;
+    height: 70px;
+}

@@ -4,17 +4,14 @@ import Feedbeck from './pages/feedback/Feedback';
 import Firms from './pages/firms/Firms';
 import Header from './pages/header/Header';
 
-
-
-
 function App() {
   return (
     <div>
       <Header/>
       <div className={classes.content}> 
-      <Catalog/>
-      <Firms/>
-      <Feedbeck/>
+        <Catalog/>
+        <Firms/>
+        <Feedbeck/>
       </div>
     </div>
   );

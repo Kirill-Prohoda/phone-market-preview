@@ -5,13 +5,13 @@ import Send from "../send/Send";
 const Feedbeck = () => {
 
     return (
-        <div className={classes.fon}>
+        <div className={classes.wrapper}>
             <div className={classes.tx}>
-                <ul className={classes.list}>
-                    <li className={classes.join}><p>JOIN SHOPPING COMMUNITY TO </p></li>
-                    <li className={classes.join}><p>GET MONTHLY PROMO</p></li>
-                    <li className={classes.type}><p>Type your email down below and be young wild generation</p></li>
-                </ul>
+                <div className={classes.list}>
+                   <p className={classes.join}>JOIN SHOPPING COMMUNITY TO </p>
+                    <p className={classes.join}>GET MONTHLY PROMO</p>
+                   <p className={classes.type}>Type your email down below and be young wild generation</p>
+                </div>
                     <Send/>
             </div>
         </div>

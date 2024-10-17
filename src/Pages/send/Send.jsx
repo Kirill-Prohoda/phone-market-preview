@@ -12,9 +12,7 @@ const [value, setValue] = useState('')
  }
 
 function hendleClick(){
-    alert({value, text:'Спасибо, что Вы с нами, Уважаемый', toString: function() {
-        return `${this.value}: ${this.text}`
-      }})
+    alert(value+" "+"Спасибо, что Вы с нами, Уважаемый")
       console.log(value)
 }
 
@@ -22,8 +20,9 @@ function hendleClick(){
         <div className={classes.communicationString}>
             <div className={classes.window}>
             <input value={value} onChange={handleChange} className={classes.line}/>
-            </div>
+            
             <button onClick={hendleClick} className={classes.but}>SEND</button>
+            </div>
 
 
         </div>

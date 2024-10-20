@@ -90,10 +90,6 @@
    border-radius: 10px;
    outline: none;
 
-
-
-
-
 }
 
 
@@ -116,6 +112,13 @@
    border: 2px solid #FFFFFF;
    border-radius: 9px;
 }
+.create:hover {
+   opacity: 0.7;
+ }
+ .create:active {
+   transform: scale(0.95);
+ }
+
 
 
 .sign {
@@ -128,5 +131,18 @@
    background: rgba(210, 12, 203, 0.515);
    border: 2px solid #FFFFFF;
    border-radius: 9px;
-
 }
+.sign__disabled {
+   background-color: gray;
+   
+}
+
+
+
+.sign:hover {
+   opacity: 0.7;
+ }
+
+.sign:active {
+   transform: scale(0.95);
+ }

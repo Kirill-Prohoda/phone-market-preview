@@ -1,0 +1,8 @@
+{
+  "name": "Admin",
+  "lastName": "Adminov",
+  "age": 33,
+  "city": "Moscow",
+  "login": "adminov@example.com",
+  "pass": "q12345678"
+}

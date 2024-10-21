@@ -17,10 +17,13 @@ const LoginPage = () => {
     setPassword(d.target.value);
   };
 
-  function toLink() {
+  function toLinkM() {
     window.location.assign("http://localhost:3000/home");
   }
 
+  function toLinkP() {
+    window.location.assign("http://localhost:3000/registration");
+  }
   let notRightEmail = true;
   if (email === ADMIN) {
     notRightEmail = false;
@@ -57,10 +60,12 @@ const LoginPage = () => {
           </div>
         </div>
         <div className={classes.buttons}>
-          <button className={classes.create}>CREATE ACCOUNT</button>
+          <button onClick={toLinkP} className={classes.create}>
+            CREATE ACCOUNT
+          </button>
           <button
             disabled={isDisabled}
-            onClick={toLink}
+            onClick={toLinkM}
             className={
               classes.sign + " " + (isDisabled ? classes.sign__disabled : "")
             }

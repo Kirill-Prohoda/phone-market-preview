@@ -31,45 +31,46 @@ const LoginPage = () => {
     notRightPassword = false;
   }
 
-  let isDisabled = notRightEmail || notRightPassword;
+    function toLinkM() {
+        window.location.assign('http://localhost:3000/home')
+    }
 
-  return (
-    <div className={classes.wrapper}>
-      <div className={classes.container}>
-        <div className={classes.avatar}></div>
-        <div className={classes.window}>
-          <div>
-            <p className={classes.email}>E-mail</p>
-            <input
-              value={email}
-              onChange={hendEmail}
-              className={classes.inEmail}
-            />
-          </div>
+    function toLinkP() {
+        window.location.assign('http://localhost:3000/registration')
+    }
 
-          <div>
-            <p className={classes.password}>Password</p>
-            <input
-              value={password}
-              onChange={hendPassword}
-              className={classes.inPassword}
-            />
-          </div>
+
+    let isDisabled = notRightEmail || notRightPassword
+
+    return (
+        <div className={classes.wrapper}>
+            <div className={classes.container}>
+                <div className={classes.avatar}>
+
+                </div>
+                <div className={classes.window}>
+                    <div >
+                        <p className={classes.email}>E-mail</p>
+                        <input value={email} onChange={hendEmail} className={classes.inEmail} />
+                    </div>
+
+                    <div>
+                        <p className={classes.password}>Password</p>
+                        <input value={password} onChange={hendPassword} className={classes.inPassword} />
+                    </div>
+
+                </div>
+                <div className={classes.buttons}>
+                    <button onClick={toLinkP} className={classes.create}>
+                        CREATE ACCOUNT
+                    </button>
+                    <button disabled={isDisabled} onClick={toLinkM} className={classes.sign + ' ' + (isDisabled ? classes.sign__disabled : '')}>
+                        SIGN IN
+                    </button>
+                </div>
+            </div>
         </div>
-        <div className={classes.buttons}>
-          <button className={classes.create}>CREATE ACCOUNT</button>
-          <button
-            disabled={isDisabled}
-            onClick={toLink}
-            className={
-              classes.sign + " " + (isDisabled ? classes.sign__disabled : "")
-            }
-          >
-            SIGN IN
-          </button>
-        </div>
-      </div>
-    </div>
+     
   );
 };
 

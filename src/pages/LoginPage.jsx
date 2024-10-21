@@ -17,10 +17,13 @@ const LoginPage = () => {
     setPassword(d.target.value);
   };
 
-  function toLink() {
+  function toLinkM() {
     window.location.assign("http://localhost:3000/home");
   }
 
+  function toLinkP() {
+    window.location.assign("http://localhost:3000/registration");
+  }
   let notRightEmail = true;
   if (email === ADMIN) {
     notRightEmail = false;

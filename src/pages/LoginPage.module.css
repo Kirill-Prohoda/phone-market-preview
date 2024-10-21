@@ -1,148 +1,130 @@
 .wrapper {
-   display: flex;
-   margin: auto;
-   width: 1600px;
-   height: 900px;
-   background-size: cover;
-   background-position: center;
+  display: flex;
+  margin: auto;
+  width: 1600px;
+  height: 900px;
+  background-size: cover;
+  background-position: center;
 
-   background-image: url(../imeges/Fon_Login.jpg);
-   justify-content: space-around;
-   align-items: center;
+  background-image: url(../images/Fon_Login.jpg);
+  justify-content: space-around;
+  align-items: center;
 
+  position: absolute;
+  top: 50%;
+  left: 50%;
 
-   
-
- 
-   position: absolute;
-   top: 50%;
-   left: 50%;
-
-   transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%);
 }
-
 
 .container {
-   display: flex;
-   width: 400px;
-   height: 500px;
-   border: 3px solid rgba(255, 255, 255, 0.4);
-   backdrop-filter: blur(5px);
-   justify-content: space-evenly;
-   flex-direction: column;
-
-
+  display: flex;
+  width: 400px;
+  height: 500px;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
+  justify-content: space-evenly;
+  flex-direction: column;
 }
 
-
 .avatar {
-   display: flex;
-   margin: auto;
-   width: 120px;
-   height: 120px;
-   justify-content: space-evenly;
-   background-image: url(../imeges/telfon.jpg);
-   border-radius: 100%;
-   background-size: 100% 120px;
-  
+  display: flex;
+  margin: auto;
+  width: 120px;
+  height: 120px;
+  justify-content: space-evenly;
+  background-image: url(../images/telfon.jpg);
+  border-radius: 100%;
+  background-size: 100% 120px;
 }
 
 .window {
-   margin: 0px auto 0px auto;
-   display: flex;
-   width: 250px;
-   justify-content: space-evenly;
-   flex-direction: column;
+  margin: 0px auto 0px auto;
+  display: flex;
+  width: 250px;
+  justify-content: space-evenly;
+  flex-direction: column;
 }
 
 .email {
-   color: aliceblue;
+  color: aliceblue;
 }
 
 .inEmail {
-   color: #ffffff;
-   display: flex;
-   width: 250px;
-   height: 40px;
-   margin: auto auto 20px auto;
-   padding: 0px 10px 0px 10px;
+  color: #ffffff;
+  display: flex;
+  width: 250px;
+  height: 40px;
+  margin: auto auto 20px auto;
+  padding: 0px 10px 0px 10px;
 
-   background: rgba(255, 255, 255, 0.117);
-   border: 3px solid rgba(255, 255, 255, 0.4);
-   border-radius: 10px;
-   outline: none;
+  background: rgba(255, 255, 255, 0.117);
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  outline: none;
 }
 
 .password {
-   color: aliceblue;
+  color: aliceblue;
 }
 
 .inPassword {
-   color: #ffffff;
-   display: flex;
-   width: 250px;
-   height: 40px;
-   margin: auto;
-   padding: 0px 10px 0px 10px;
-   background: rgba(255, 255, 255, 0.117);
+  color: #ffffff;
+  display: flex;
+  width: 250px;
+  height: 40px;
+  margin: auto;
+  padding: 0px 10px 0px 10px;
+  background: rgba(255, 255, 255, 0.117);
 
-   border: 3px solid rgba(255, 255, 255, 0.4);
-   border-radius: 10px;
-   outline: none;
-
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  outline: none;
 }
-
 
 .buttons {
-   display: flex;
-   margin: auto 73.286px auto 73.286px;
-   justify-content: space-between;
-
+  display: flex;
+  margin: auto 73.286px auto 73.286px;
+  justify-content: space-between;
 }
-
 
 .create {
-   color: #FFFFFF;
-   width: auto;
-   height: 40px;
-   display: flex;
-   align-items: center;
-   padding: 0px 5px 0px 5px;
-   background: rgba(0, 255, 183, 0.335);
-   border: 2px solid #FFFFFF;
-   border-radius: 9px;
+  color: #ffffff;
+  width: auto;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0px 5px 0px 5px;
+  background: rgba(0, 255, 183, 0.335);
+  border: 2px solid #ffffff;
+  border-radius: 9px;
 }
 .create:hover {
-   opacity: 0.7;
- }
- .create:active {
-   transform: scale(0.95);
- }
-
-
+  opacity: 0.7;
+}
+.create:active {
+  transform: scale(0.95);
+}
 
 .sign {
-   color: #FFFFFF;
-   width: auto;
-   height: 40px;
-   display: flex;
-   align-items: center;
-   padding: 0px 5px 0px 5px;
-   background: rgba(210, 12, 203, 0.515);
-   border: 2px solid #FFFFFF;
-   border-radius: 9px;
+  color: #ffffff;
+  width: auto;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0px 5px 0px 5px;
+  background: rgba(210, 12, 203, 0.515);
+  border: 2px solid #ffffff;
+  border-radius: 9px;
 }
 .sign__disabled {
-   background-color: gray;
-   
+  background-color: gray;
 }
 
-
-
 .sign:hover {
-   opacity: 0.7;
- }
+  opacity: 0.7;
+}
 
 .sign:active {
-   transform: scale(0.95);
- }
+  transform: scale(0.95);
+}

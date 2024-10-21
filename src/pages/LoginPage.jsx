@@ -20,6 +20,13 @@ const LoginPage = () => {
 
   function toLinkP() {
     window.location.assign("http://localhost:3000/registration");
+<<<<<<< HEAD
+=======
+  }
+  let notRightEmail = true;
+  if (email === ADMIN) {
+    notRightEmail = false;
+>>>>>>> 4727202 (PHO-12 Создал страницу регистрации)
   }
 
   const toLogin = () => {
@@ -66,7 +73,17 @@ const LoginPage = () => {
           <button onClick={toLinkP} className={classes.create}>
             CREATE ACCOUNT
           </button>
+<<<<<<< HEAD
           <button onClick={toLogin} className={classes.sign}>
+=======
+          <button
+            disabled={isDisabled}
+            onClick={toLinkM}
+            className={
+              classes.sign + " " + (isDisabled ? classes.sign__disabled : "")
+            }
+          >
+>>>>>>> 4727202 (PHO-12 Создал страницу регистрации)
             SIGN IN
           </button>
         </div>

@@ -1,75 +1,76 @@
 import React, { useState } from "react";
-import classes from './LoginPage.module.css'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import classes from "./LoginPage.module.css";
 
-
-const ADMIN = 'admin'
-const PASSWORD = '1234'
+const ADMIN = "admin";
+const PASSWORD = "1234";
 
 const LoginPage = () => {
+  const [email, setEmail] = useState("");
 
+  const hendEmail = (d) => {
+    setEmail(d.target.value);
+  };
 
-    const [email, setEmail] = useState('')
+  const [password, setPassword] = useState("");
 
-    const hendEmail = (d) => {
-        setEmail(d.target.value)
-    }
+  const hendPassword = (d) => {
+    setPassword(d.target.value);
+  };
 
-    const [password, setPassword] = useState('')
+  function toLink() {
+    window.location.assign("http://localhost:3000/home");
+  }
 
-    const hendPassword = (d) => {
-        setPassword(d.target.value)
+  let notRightEmail = true;
+  if (email === ADMIN) {
+    notRightEmail = false;
+  }
 
-    }
+  let notRightPassword = true;
+  if (password === PASSWORD) {
+    notRightPassword = false;
+  }
 
-    function toLink() {
-        window.location.assign('http://localhost:3000/home')
-    }
+  let isDisabled = notRightEmail || notRightPassword;
 
-    let notRightEmail = true
-    if (email === ADMIN) {
-        notRightEmail = false
-    }
+  return (
+    <div className={classes.wrapper}>
+      <div className={classes.container}>
+        <div className={classes.avatar}></div>
+        <div className={classes.window}>
+          <div>
+            <p className={classes.email}>E-mail</p>
+            <input
+              value={email}
+              onChange={hendEmail}
+              className={classes.inEmail}
+            />
+          </div>
 
-    let notRightPassword = true
-    if (password === PASSWORD) {
-        notRightPassword = false
-    }
-
-    let isDisabled = notRightEmail || notRightPassword
-
-    return (
-        <div className={classes.wrapper}>
-            <div className={classes.container}>
-                <div className={classes.avatar}>
-
-                </div>
-                <div className={classes.window}>
-                    <div >
-                        <p className={classes.email}>E-mail</p>
-                        <input value={email} onChange={hendEmail} className={classes.inEmail} />
-                    </div>
-
-                    <div>
-                        <p className={classes.password}>Password</p>
-                        <input value={password} onChange={hendPassword} className={classes.inPassword} />
-                    </div>
-
-                </div>
-                <div className={classes.buttons}>
-                    <button className={classes.create}>
-                        CREATE ACCOUNT
-                    </button>
-                    <button disabled={isDisabled} onClick={toLink} className={classes.sign + ' ' + (isDisabled ? classes.sign__disabled : '')}>
-                        SIGN IN
-                    </button>
-                </div>
-            </div>
+          <div>
+            <p className={classes.password}>Password</p>
+            <input
+              value={password}
+              onChange={hendPassword}
+              className={classes.inPassword}
+            />
+          </div>
         </div>
-    )
-}
-
+        <div className={classes.buttons}>
+          <button className={classes.create}>CREATE ACCOUNT</button>
+          <button
+            disabled={isDisabled}
+            onClick={toLink}
+            className={
+              classes.sign + " " + (isDisabled ? classes.sign__disabled : "")
+            }
+          >
+            SIGN IN
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default LoginPage;
-
-

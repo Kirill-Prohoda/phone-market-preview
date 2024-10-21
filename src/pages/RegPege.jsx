@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import classes from './LoginPage.module.css'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import classes from './RegPage.module.css'
+
 
 
 const ADMIN = 'admin'
 const PASSWORD = '1234'
 
-const LoginPage = () => {
+const RegPage = () => {
 
 
     const [email, setEmail] = useState('')
@@ -22,35 +22,29 @@ const LoginPage = () => {
 
     }
 
-    function toLinkM() {
-        window.location.assign('http://localhost:3000/home')
+    const [age, setAge] = useState('')
+
+    const hendAge = (d) => {
+        setAge(d.target.value)
+       
+    }
+    function toLink() {
+        window.location.assign('http://localhost:3000/')
     }
 
-    function toLinkP() {
-        window.location.assign('http://localhost:3000/registration')
-    }
-    let notRightEmail = true
-    if (email === ADMIN) {
-        notRightEmail = false
-    }
-
-    let notRightPassword = true
-    if (password === PASSWORD) {
-        notRightPassword = false
-    }
-
-    let isDisabled = notRightEmail || notRightPassword
-
+  
     return (
         <div className={classes.wrapper}>
             <div className={classes.container}>
-                <div className={classes.avatar}>
-
-                </div>
                 <div className={classes.window}>
                     <div >
                         <p className={classes.email}>E-mail</p>
                         <input value={email} onChange={hendEmail} className={classes.inEmail} />
+                    </div>
+
+                    <div>
+                        <p className={classes.Age}>Age</p>
+                        <input type="number" value={age} onChange={hendAge} className={classes.inAge}/>
                     </div>
 
                     <div>
@@ -59,12 +53,10 @@ const LoginPage = () => {
                     </div>
 
                 </div>
+
                 <div className={classes.buttons}>
-                    <button onClick={toLinkP} className={classes.create}>
-                        CREATE ACCOUNT
-                    </button>
-                    <button disabled={isDisabled} onClick={toLinkM} className={classes.sign + ' ' + (isDisabled ? classes.sign__disabled : '')}>
-                        SIGN IN
+                    <button  onClick={toLink} className={classes.confirm}>
+                    CONFIRM
                     </button>
                 </div>
             </div>
@@ -73,6 +65,4 @@ const LoginPage = () => {
 }
 
 
-export default LoginPage;
-
-
+export default RegPage;

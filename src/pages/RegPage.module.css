@@ -76,18 +76,17 @@
     color: aliceblue;
 }
 .inAge {
-    color: #ffffff;
-    display: flex;
-    width: 250px;
-    height: 40px;
-    margin: auto auto 20px auto;
-    padding: 0px 10px 0px 10px;
-    background: rgba(255, 255, 255, 0.117);
-    border: 3px solid rgba(255, 255, 255, 0.4);
-    border-radius: 10px;
-    outline: none;
- 
- }
+  color: #ffffff;
+  display: flex;
+  width: 250px;
+  height: 40px;
+  margin: auto auto 20px auto;
+  padding: 0px 10px 0px 10px;
+  background: rgba(255, 255, 255, 0.117);
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  outline: none;
+}
 
  .password {
     color: aliceblue;

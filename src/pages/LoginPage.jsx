@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import classes from "./LoginPage.module.css";
 
-const ADMIN = "admin";
-const PASSWORD = "1234";
-
 const LoginPage = () => {
   const [email, setEmail] = useState("");
 
@@ -16,24 +13,7 @@ const LoginPage = () => {
   const hendPassword = (d) => {
     setPassword(d.target.value);
   };
-
-  function toLinkM() {
-    window.location.assign("http://localhost:3000/home");
-  }
-
-  function toLinkP() {
-    window.location.assign("http://localhost:3000/registration");
-  }
-  let notRightEmail = true;
-  if (email === ADMIN) {
-    notRightEmail = false;
-  }
-
-  let notRightPassword = true;
-  if (password === PASSWORD) {
-    notRightPassword = false;
-  }
-
+  
     function toLinkM() {
         window.location.assign('http://localhost:3000/home')
     }
@@ -41,10 +21,6 @@ const LoginPage = () => {
     function toLinkP() {
         window.location.assign('http://localhost:3000/registration')
     }
-
-
-    let isDisabled = notRightEmail || notRightPassword
-
     return (
         <div className={classes.wrapper}>
             <div className={classes.container}>
@@ -67,7 +43,7 @@ const LoginPage = () => {
                     <button onClick={toLinkP} className={classes.create}>
                         CREATE ACCOUNT
                     </button>
-                    <button disabled={isDisabled} onClick={toLinkM} className={classes.sign + ' ' + (isDisabled ? classes.sign__disabled : '')}>
+                    <button  onClick={toLinkM} className={classes.sign}>
                         SIGN IN
                     </button>
                 </div>

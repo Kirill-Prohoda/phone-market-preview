@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 function App() {
   const routes = useRoutes()
   return ( 
-    <BrowserRouter >
+    <BrowserRouter>
    {routes}
    </BrowserRouter>
   );

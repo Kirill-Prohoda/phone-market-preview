@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import classes from './RegPage.module.css'
+
 
 
 
@@ -7,6 +8,9 @@ const ADMIN = 'admin'
 const PASSWORD = '1234'
 
 const RegPage = () => {
+    
+
+
 
 
     const [email, setEmail] = useState('')
@@ -14,14 +18,19 @@ const RegPage = () => {
     const hendEmail = (d) => {
         setEmail(d.target.value)
     }
-
+    
+    
+    
+    
     const [password, setPassword] = useState('')
-
+    
     const hendPassword = (d) => {
         setPassword(d.target.value)
-
+        
     }
-
+    
+    
+    
     const [age, setAge] = useState('')
 
     const hendAge = (d) => {
@@ -32,7 +41,25 @@ const RegPage = () => {
         window.location.assign('http://localhost:3000/')
     }
 
-  
+   const toReg = async () => {
+  await  fetch('http://localhost:4000/reg', {
+        method:'POST',
+        headers:{ "Content-Type": "application/json"},
+
+        body: JSON.stringify({
+        login: email,
+        pass: password,
+        age: age, 
+        })
+
+        })
+        .then((data) => data.json())
+        .then((data) => { console.log(data)})
+    }
+    
+
+    
+
     return (
         <div className={classes.wrapper}>
             <div className={classes.container}>
@@ -55,7 +82,7 @@ const RegPage = () => {
                 </div>
 
                 <div className={classes.buttons}>
-                    <button  onClick={toLink} className={classes.confirm}>
+                    <button  onClick={toReg} className={classes.confirm}>
                     CONFIRM
                     </button>
                 </div>

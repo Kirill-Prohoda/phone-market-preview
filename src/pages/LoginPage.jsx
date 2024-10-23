@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import classes from "./LoginPage.module.css";
 
-const ADMIN = "admin";
-const PASSWORD = "1234";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -24,15 +22,15 @@ const LoginPage = () => {
   function toLinkP() {
     window.location.assign("http://localhost:3000/registration");
   }
-  let notRightEmail = true;
-  if (email === ADMIN) {
-    notRightEmail = false;
-  }
+  // let notRightEmail = true;
+  // if (email === ADMIN) {
+  //   notRightEmail = false;
+  // }
 
-  let notRightPassword = true;
-  if (password === PASSWORD) {
-    notRightPassword = false;
-  }
+  // let notRightPassword = true;
+  // if (password === PASSWORD) {
+  //   notRightPassword = false;
+  // }
 
     function toLinkM() {
         window.location.assign('http://localhost:3000/home')
@@ -43,8 +41,31 @@ const LoginPage = () => {
     }
 
 
-    let isDisabled = notRightEmail || notRightPassword
+    let isDisabled = false
+    // notRightEmail || notRightPassword
 
+
+
+    const toLogin = () => {
+      fetch('http://localhost:4000/login', {
+            method:'POST',
+            headers:{ "Content-Type": "application/json"},
+            body: JSON.stringify({
+            login: email,
+            pass: password,
+            })
+    
+            })
+            .then((data) => data.json())
+
+            .then((data) => {
+             if(data.status){
+               toLinkM()
+             }
+
+            })
+        
+}
     return (
         <div className={classes.wrapper}>
             <div className={classes.container}>
@@ -67,7 +88,7 @@ const LoginPage = () => {
                     <button onClick={toLinkP} className={classes.create}>
                         CREATE ACCOUNT
                     </button>
-                    <button disabled={isDisabled} onClick={toLinkM} className={classes.sign + ' ' + (isDisabled ? classes.sign__disabled : '')}>
+                    <button disabled={isDisabled} onClick={toLogin} className={classes.sign + ' ' + (isDisabled ? classes.sign__disabled : '')}>
                         SIGN IN
                     </button>
                 </div>

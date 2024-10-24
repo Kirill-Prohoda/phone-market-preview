@@ -41,6 +41,15 @@ app.post("/reg", (req, res) => {
     });
   }
 
+if (user.age === '' || user.login === '' || user.pass === '') {
+  return res.status(200).json({
+    status: false,
+    message: "Заполните поля",
+  });
+}
+
+
+
   if (users.find((user) => user.login === login)) {
     return res.status(200).json({
       status: false,

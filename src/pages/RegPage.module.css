@@ -98,8 +98,9 @@
 
 .buttons {
   display: flex;
+  justify-content: space-between; 
   margin: auto 73.286px auto 73.286px;
-  justify-content: flex-end;
+
 }
 
 .create {
@@ -140,5 +141,29 @@
 }
 
 .confirm:active {
+  transform: scale(0.95);
+}
+
+.login {
+  color: #ffffff;
+  width: 63px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0px 5px 0px 5px;
+  background: rgba(210, 12, 203, 0.515);
+  border: 2px solid #ffffff;
+  border-radius: 9px;
+  justify-content: center;
+}
+.login__disabled {
+  background-color: gray;
+}
+
+.login:hover {
+  opacity: 0.7;
+}
+
+.login:active {
   transform: scale(0.95);
 }

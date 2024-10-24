@@ -44,12 +44,6 @@ app.post("/reg", (req, res) => {
   const {  lastName, age, city, login, pass } = req.body;
   const user = { lastName, age, city, login, pass };
 
-  // if (!name || !lastName || !age || !city || !login || !pass) {
-  //   return res.status(200).json({
-  //     status: false,
-  //     message: "Все поля обязательны к заполнению",
-  //   });
-  // }
 
   if (users.find((user) => user.login === login)) {
     return res.status(200).json({

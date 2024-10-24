@@ -54,12 +54,16 @@ const RegPage = () => {
 
         })
         .then((data) => data.json())
-        .then((data) => { console.log(data)})
-    }
+        .then((data) => {
+           if(data.status){
+            toLink()
+          }
+        
+    })
     
 
-    
 
+   }
     return (
         <div className={classes.wrapper}>
             <div className={classes.container}>
@@ -82,6 +86,9 @@ const RegPage = () => {
                 </div>
 
                 <div className={classes.buttons}>
+                    <button  onClick={toLink} className={classes.login}>
+                    login
+                    </button>
                     <button  onClick={toReg} className={classes.confirm}>
                     CONFIRM
                     </button>

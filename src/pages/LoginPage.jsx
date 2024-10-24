@@ -22,15 +22,7 @@ const LoginPage = () => {
   function toLinkP() {
     window.location.assign("http://localhost:3000/registration");
   }
-  // let notRightEmail = true;
-  // if (email === ADMIN) {
-  //   notRightEmail = false;
-  // }
-
-  // let notRightPassword = true;
-  // if (password === PASSWORD) {
-  //   notRightPassword = false;
-  // }
+  
 
     function toLinkM() {
         window.location.assign('http://localhost:3000/home')
@@ -42,8 +34,6 @@ const LoginPage = () => {
 
 
     let isDisabled = false
-    // notRightEmail || notRightPassword
-
 
 
     const toLogin = () => {

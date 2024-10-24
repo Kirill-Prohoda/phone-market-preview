@@ -63,6 +63,24 @@ if (user.age === '' || user.login === '' || user.pass === '') {
 
 
 
+if (user.age === '' || user.login === '' || user.pass === '') {
+  return res.status(200).json({
+    status: false,
+    message: "Заполните поля",
+  });
+}
+
+
+
+if (user.age === '' || user.login === '' || user.pass === '') {
+  return res.status(200).json({
+    status: false,
+    message: "Заполните поля",
+  });
+}
+
+
+
   if (users.find((user) => user.login === login)) {
     return res.status(200).json({
       status: false,

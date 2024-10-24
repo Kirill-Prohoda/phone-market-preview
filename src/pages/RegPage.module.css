@@ -161,3 +161,91 @@
  .confirm:active {
     transform: scale(0.95);
   }
+.password {
+  color: aliceblue;
+}
+
+.inPassword {
+  color: #ffffff;
+  display: flex;
+  width: 250px;
+  height: 40px;
+  margin: auto;
+  padding: 0px 10px 0px 10px;
+  background: rgba(255, 255, 255, 0.117);
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  outline: none;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between; 
+  margin: auto 73.286px auto 73.286px;
+
+}
+
+.create {
+  color: #ffffff;
+  width: auto;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0px 5px 0px 5px;
+  background: rgba(0, 255, 183, 0.335);
+  border: 2px solid #ffffff;
+  border-radius: 9px;
+}
+.create:hover {
+  opacity: 0.7;
+}
+.create:active {
+  transform: scale(0.95);
+}
+
+.confirm {
+  color: #ffffff;
+  width: auto;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0px 5px 0px 5px;
+  background: rgba(210, 12, 203, 0.515);
+  border: 2px solid #ffffff;
+  border-radius: 9px;
+}
+.confirm__disabled {
+  background-color: gray;
+}
+
+.confirm:hover {
+  opacity: 0.7;
+}
+
+.confirm:active {
+  transform: scale(0.95);
+}
+
+.login {
+  color: #ffffff;
+  width: 63px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0px 5px 0px 5px;
+  background: rgba(210, 12, 203, 0.515);
+  border: 2px solid #ffffff;
+  border-radius: 9px;
+  justify-content: center;
+}
+.login__disabled {
+  background-color: gray;
+}
+
+.login:hover {
+  opacity: 0.7;
+}
+
+.login:active {
+  transform: scale(0.95);
+}

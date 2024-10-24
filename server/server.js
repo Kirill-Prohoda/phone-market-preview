@@ -2,6 +2,15 @@ const express = require("express");
 
 const app = express();
 const users = require("./users.json");
+const cors = require ("cors");
+
+app.use(cors());
+
+const bodyParser = require('body-parser')
+app.use( bodyParser.json() );       // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+}));
 
 const port = 4000;
 
@@ -13,6 +22,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/login", (req, res) => {
+ 
   const { login, pass } = req.body;
 
   const user = users.find((user) => user.login === login && user.pass === pass);
@@ -31,15 +41,18 @@ app.post("/login", (req, res) => {
 });
 
 app.post("/reg", (req, res) => {
-  const { name, lastName, age, city, login, pass } = req.body;
-  const user = { name, lastName, age, city, login, pass };
+  const {  lastName, age, city, login, pass } = req.body;
+  const user = { lastName, age, city, login, pass };
 
-  if (!name || !lastName || !age || !city || !login || !pass) {
-    return res.status(200).json({
-      status: false,
-      message: "Все поля обязательны к заполнению",
-    });
-  }
+
+if (user.age === '' || user.login === '' || user.pass === '') {
+  return res.status(200).json({
+    status: false,
+    message: "Заполните поля",
+  });
+}
+
+
 
 if (user.age === '' || user.login === '' || user.pass === '') {
   return res.status(200).json({

@@ -32,7 +32,33 @@ const RegPage = () => {
         window.location.assign('http://localhost:3000/')
     }
 
+<<<<<<< HEAD
   
+=======
+   const toReg = async () => {
+  await  fetch('http://localhost:4000/reg', {
+        method:'POST',
+        headers:{ "Content-Type": "application/json"},
+
+        body: JSON.stringify({
+        login: email,
+        pass: password,
+        age: age, 
+        })
+
+        })
+        .then((data) => data.json())
+        .then((data) => {
+           if(data.status){
+            toLink()
+          }
+        
+    })
+    
+
+
+   }
+>>>>>>> e8d746e (PHO-12 Создал регистрацию)
     return (
         <div className={classes.wrapper}>
             <div className={classes.container}>
@@ -55,7 +81,14 @@ const RegPage = () => {
                 </div>
 
                 <div className={classes.buttons}>
+<<<<<<< HEAD
                     <button  onClick={toLink} className={classes.confirm}>
+=======
+                    <button  onClick={toLink} className={classes.login}>
+                    login
+                    </button>
+                    <button  onClick={toReg} className={classes.confirm}>
+>>>>>>> e8d746e (PHO-12 Создал регистрацию)
                     CONFIRM
                     </button>
                 </div>

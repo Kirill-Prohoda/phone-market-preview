@@ -21,6 +21,27 @@ const LoginPage = () => {
     function toLinkP() {
         window.location.assign('http://localhost:3000/registration')
     }
+
+ const toLogin = () => {
+      fetch('http://localhost:4000/login', {
+            method:'POST',
+            headers:{ "Content-Type": "application/json"},
+            body: JSON.stringify({
+            login: email,
+            pass: password,
+            })
+    
+            })
+            .then((data) => data.json())
+
+            .then((data) => {
+             if(data.status){
+               toLinkM()
+             }
+
+            })
+        
+}
     return (
         <div className={classes.wrapper}>
             <div className={classes.container}>
